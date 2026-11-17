@@ -1,0 +1,172 @@
+﻿@page "/Ventas/Index"
+@rendermode InteractiveServer
+
+@inject VentasService ventasService
+@inject ToastService toastService
+
+<PageTitle>Index</PageTitle>
+
+<div class="container">
+    <div class="card shadow-lg">
+
+        @*  Encabezado *@
+        <div class="card-header d-flex justify-content-between align-content-center mb-4">
+            <h5 class="card-title">Registro de Ventas de Cafe</h5>
+            <a href="/Ventas/Create" class="btn btn-primary"><span class="bi bi-plus-square mt-3"></span> Crear</a>
+        </div>
+
+        <div class="card-body">
+
+            @* Labels *@
+            <div class="row">
+
+                @* Filtrar por *@
+                <div class="col-3">
+                    <label class="col-form-label"><strong>Filtrar por</strong></label>
+                </div>
+
+                @* Búsqueda *@
+                <div class="col-4">
+                    <label class="col-form-label"><strong>Búsqueda</strong></label>
+                </div>
+            </div>
+
+            @* Filtros *@
+            <div class="row align-items-end">
+
+                @* Filtrar por *@
+                <div class="col-3">
+                    <InputSelect class="form-select" @bind-Value="Filtro">
+                        <option value="" selected disabled>Elija una opción</option>
+                        <option value="VentaId">VentaId</option>
+                        <option value="Concepto">Concepto</option>
+                        <option value="Fecha">Fecha</option>
+                    </InputSelect>
+                </div>
+
+                @* Búsqueda *@
+                <div class="col-4">
+                    <div class="input-group">
+                        <input class="form-control" @bind="ValorFiltro" placeholder="Buscar" />
+                        <button type="button" class="btn btn-outline-primary bi bi-search" @onclick="Buscar"></button>
+                    </div>
+                </div>
+
+                @* Reestablecer *@
+                <div class="col-2">
+                    <button type="button" class="btn btn-outline-secondary bi bi-arrow-counterclockwise" @onclick="Reestablecer"></button>
+                </div>
+
+                @* FiltroFecha *@
+                <div class="row mt-3">
+
+                    @* Desde *@
+                    <div class="col-3">
+                        <label class="col-form-label"><strong>Desde</strong></label>
+                        <InputDate class="form-control" @bind-Value="Desde"></InputDate>
+                    </div>
+
+                    @* Hasta *@
+                    <div class="col-3">
+                        <label class="col-form-label"><strong>Hasta</strong></label>
+                        <InputDate class="form-control" @bind-Value="Hasta"></InputDate>
+                    </div>
+                </div>
+
+                @* QuickGrid *@
+                <div class="grid">
+                    <QuickGrid Items="ListaVentas.AsQueryable()" Class="table table-hover mt-3">
+                        <PropertyColumn Property="v => v.VentaId" Title="VentaId" Sortable="true" />
+                        <PropertyColumn Property="v => v.Fecha" Title="Fecha" Sortable="true" />
+                        <PropertyColumn Property="v => v.Observacion" Title="Observación" Sortable="true" />
+                        <PropertyColumn Property="v => v.Total" Title="Total" Sortable="true" />
+                        <TemplateColumn Title="Opciones" Align="Align.Center">
+                            <a href="/Ventas/Edit/@context.VentaId" class="btn btn-outline-primary bi bi-pencil-square"></a>
+                        </TemplateColumn>
+                    </QuickGrid>
+                </div>
+
+            </div>
+        </div>
+
+        @* Footer *@
+        <div class="card-footer d-flex justify-content-between align-items-center">
+            <label><strong>Cantidad: </strong> @ListaVentas.Count()</label>
+            <label><strong>Total Vendido:</strong> @ListaVentas.Sum(v => v.Total)</label>
+        </div>
+
+    </div>
+</div>
+
+
+@code {
+    public string Filtro { get; set; } = string.Empty;
+    public string ValorFiltro { get; set; } = string.Empty;
+
+    public List<Ventas> ListaVentas { get; set; } = new();
+
+    public DateTime? Desde { get; set; }
+    public DateTime? Hasta { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var resultado = await ventasService.GetList(v => v.VentaId > 0);
+        ListaVentas = resultado.Value;
+    }
+
+    private async Task Buscar()
+    {
+        if (Filtro == "VentaId")
+        {
+            var valor = ValorFiltro.Trim();
+            var resultado = await ventasService.GetList(v => v.VentaId.ToString() == valor);
+
+            ListaVentas = resultado.Value;
+        }
+
+        else if (Filtro == "Concepto")
+        {
+            var valor = ValorFiltro.Trim().ToLower();
+            var resultado = await ventasService.GetList(v => v.Observacion.ToLower().Contains(valor));
+
+            ListaVentas = resultado.Value;
+        }
+
+        else if (Filtro == "Fecha")
+        {
+            if (Desde == null || Hasta == null)
+            {
+                toastService.ShowError("Seleccione las fechas Desde y Hasta");
+                return;
+            }
+
+            if (Desde > Hasta)
+            {
+                toastService.ShowError("Seleccione un rango de fechas válido");
+                return;
+            }
+
+            var desde = Desde.Value.Date;
+            var hasta = Hasta.Value.Date.AddDays(1);
+
+            var resultado = await ventasService.GetList(v => v.Fecha >= desde && v.Fecha < hasta);
+            ListaVentas = resultado.Value;
+        }
+
+        else
+        {
+            toastService.ShowError("Seleccione un filtro");
+        }
+    }
+
+    private async Task Reestablecer()
+    {
+        var resultado = await ventasService.GetList(v => v.VentaId > 0);
+        ListaVentas = resultado.Value;
+
+        Filtro = string.Empty;
+        ValorFiltro = string.Empty;
+        Desde = null;
+        Hasta = null;
+    }
+}
