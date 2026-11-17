@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JazmineM_AP1_P2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e90662c0b63a966ae933ff5e55a26c1933f1a67b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0372ec2d804344ebd50b92f9e96b9683b0ad2f7a")]
 [assembly: System.Reflection.AssemblyProductAttribute("JazmineM_AP1_P2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JazmineM_AP1_P2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
