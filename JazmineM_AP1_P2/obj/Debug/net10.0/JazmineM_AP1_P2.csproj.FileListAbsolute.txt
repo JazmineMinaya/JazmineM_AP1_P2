@@ -207,10 +207,11 @@ C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\staticwebas
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\staticwebassets.development.json
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\swae.build.ex.cache
-C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\JazmineM.53AE341F.Up2Date
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\JazmineM_AP1_P2.dll
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\refint\JazmineM_AP1_P2.dll
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\JazmineM_AP1_P2.pdb
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\JazmineM_AP1_P2.genruntimeconfig.cache
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\ref\JazmineM_AP1_P2.dll
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\JazmineM_AP1_P2.sourcelink.json
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

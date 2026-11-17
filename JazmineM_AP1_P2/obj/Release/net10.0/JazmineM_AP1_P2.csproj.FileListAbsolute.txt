@@ -214,3 +214,4 @@ C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Release\net10.0\refint\Ja
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Release\net10.0\JazmineM_AP1_P2.pdb
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Release\net10.0\JazmineM_AP1_P2.genruntimeconfig.cache
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Release\net10.0\ref\JazmineM_AP1_P2.dll
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Release\net10.0\JazmineM_AP1_P2.sourcelink.json
