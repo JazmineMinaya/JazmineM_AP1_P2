@@ -45,8 +45,8 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 Components\Layout\ReconnectModal.razor.js
-C:\Users\jairo\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.14\build\..\_framework\blazor.web.js
-C:\Users\jairo\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.14\build\..\_framework\blazor.server.js
+C:\Users\jairo\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.15\build\..\_framework\blazor.web.js
+C:\Users\jairo\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.15\build\..\_framework\blazor.server.js
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\wwwroot\app.css
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -93,5 +93,5 @@ C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\wwwroot\lib\bootstrap\dist\js
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\Components\Layout\ReconnectModal.razor.js
-C:\Users\jairo\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.14\_framework\blazor.web.js
-C:\Users\jairo\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.14\_framework\blazor.server.js
+C:\Users\jairo\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.15\_framework\blazor.web.js
+C:\Users\jairo\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.15\_framework\blazor.server.js
