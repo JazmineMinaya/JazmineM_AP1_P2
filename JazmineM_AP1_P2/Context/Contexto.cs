@@ -20,7 +20,7 @@ public class Contexto : DbContext
             new Productos
             {
                 ProductoId = 1,
-                Nombre = "Starbucks Frappuccino Mocha",
+                Nombre = "Mocha",
                 Precio = 175.00,
                 Stock = 10
             },
@@ -28,7 +28,7 @@ public class Contexto : DbContext
             new Productos
             {
                 ProductoId = 2,
-                Nombre = "Starbucks Frappuccino Vanilla",
+                Nombre = "Vanilla",
                 Precio = 170.00,
                 Stock = 17
             },
@@ -36,7 +36,7 @@ public class Contexto : DbContext
             new Productos
             {
                 ProductoId = 3,
-                Nombre = "Starbucks Frappuccino Caramel",
+                Nombre = "Caramel",
                 Precio = 180.00,
                 Stock = 10
             },
@@ -44,7 +44,7 @@ public class Contexto : DbContext
             new Productos
             {
                 ProductoId = 4,
-                Nombre = "Starbucks Frappuccino Coffee",
+                Nombre = "Coffee",
                 Precio = 160.00,
                 Stock = 12
             },
@@ -52,7 +52,7 @@ public class Contexto : DbContext
             new Productos
             {
                 ProductoId = 5,
-                Nombre = "Starbucks Frappuccino White Chocolate Mocha",
+                Nombre = "White Mocha",
                 Precio = 195.00,
                 Stock = 10
             }

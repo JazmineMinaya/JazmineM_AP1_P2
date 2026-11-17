@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JazmineM_AP1_P2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8189ed5db09563d49a72a967a3dcfc9adeab611f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9afc7a6cd1298453996e6b4f21e44f793b157a14")]
 [assembly: System.Reflection.AssemblyProductAttribute("JazmineM_AP1_P2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JazmineM_AP1_P2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -68,35 +68,35 @@ namespace JazmineM_AP1_P2.Migrations
                         new
                         {
                             ProductoId = 1,
-                            Nombre = "Starbucks Frappuccino Mocha",
+                            Nombre = "Mocha",
                             Precio = 175.0,
                             Stock = 10
                         },
                         new
                         {
                             ProductoId = 2,
-                            Nombre = "Starbucks Frappuccino Vanilla",
+                            Nombre = "Vanilla",
                             Precio = 170.0,
                             Stock = 17
                         },
                         new
                         {
                             ProductoId = 3,
-                            Nombre = "Starbucks Frappuccino Caramel",
+                            Nombre = "Caramel",
                             Precio = 180.0,
                             Stock = 10
                         },
                         new
                         {
                             ProductoId = 4,
-                            Nombre = "Starbucks Frappuccino Coffee",
+                            Nombre = "Coffee",
                             Precio = 160.0,
                             Stock = 12
                         },
                         new
                         {
                             ProductoId = 5,
-                            Nombre = "Starbucks Frappuccino White Chocolate Mocha",
+                            Nombre = "White Mocha",
                             Precio = 195.0,
                             Stock = 10
                         });
