@@ -215,3 +215,15 @@ C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\refint\Jazm
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\JazmineM_AP1_P2.pdb
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\JazmineM_AP1_P2.genruntimeconfig.cache
 C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\ref\JazmineM_AP1_P2.dll
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\bin\Debug\net10.0\JazmineM_AP1_P2.runtimeconfig.dev.json
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.lib.module.js
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.js
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\HotReload\Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.Config.js
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\HotReload\browser-tools-key.public.json
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\HotReload\browser-tools-key.private.json
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\jsmodules\jsmodules.build.manifest.json
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\scopedcss\scopedcss.cache
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\compressed\h1cullyv0j-{0}-tchfgznwy8-tchfgznwy8.gz
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\compressed\8yarc2huuk-{0}-fyy96m9igg-fyy96m9igg.gz
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\compressed\aidpd57v0d-{0}-v1vy2to33n-v1vy2to33n.gz
+C:\JazmineM_AP1_P2\JazmineM_AP1_P2\JazmineM_AP1_P2\obj\Debug\net10.0\compressed\0lo08k3yjo-{0}-ysew0n4kjn-ysew0n4kjn.gz

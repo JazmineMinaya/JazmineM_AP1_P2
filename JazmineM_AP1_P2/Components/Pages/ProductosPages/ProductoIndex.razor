@@ -1,0 +1,124 @@
+﻿@page "/Productos/Index"
+@rendermode InteractiveServer
+
+@inject ProductosService productosService
+@inject ToastService toastService
+
+<PageTitle>Productos</PageTitle>
+
+<div class="container">
+    <div class="card shadow-lg">
+
+        @*  Encabezado *@
+        <div class="card-header d-flex justify-content-between align-content-center mb-4">
+            <h5 class="card-title">Registro de Productos</h5>
+        </div>
+
+        <div class="card-body">
+
+            @* Labels *@
+            <div class="row">
+
+                @* Filtrar por *@
+                <div class="col-3">
+                    <label class="col-form-label"><strong>Filtrar por</strong></label>
+                </div>
+
+                @* Búsqueda *@
+                <div class="col-4">
+                    <label class="col-form-label"><strong>Búsqueda</strong></label>
+                </div>
+            </div>
+
+            @* Filtros *@
+            <div class="row align-items-end">
+
+                @* Filtrar por *@
+                <div class="col-3">
+                    <InputSelect class="form-select" @bind-Value="Filtro">
+                        <option value="" selected disabled>Elija una opción</option>
+                        <option value="ProductoId">ProductoId</option>
+                        <option value="Nombre">Nombre</option>
+                    </InputSelect>
+                </div>
+
+                @* Búsqueda *@
+                <div class="col-4">
+                    <div class="input-group">
+                        <input class="form-control" @bind="ValorFiltro" placeholder="Buscar" />
+                        <button type="button" class="btn btn-outline-primary bi bi-search" @onclick="Buscar"></button>
+                    </div>
+                </div>
+
+                @* Reestablecer *@
+                <div class="col-2">
+                    <button type="button" class="btn btn-outline-secondary bi bi-arrow-counterclockwise" @onclick="Reestablecer"></button>
+                </div>
+
+                @* QuickGrid *@
+                <div class="grid">
+                    <QuickGrid Items="ListaProductos.AsQueryable()" Class="table table-hover mt-3">
+                        <PropertyColumn Property="p => p.ProductoId" Title="ProductoId" Sortable="true" />
+                        <PropertyColumn Property="p => p.Nombre" Title="Nombre" Sortable="true" />
+                        <PropertyColumn Property="p => p.Precio" Title="Precio" Sortable="true" />
+                        <PropertyColumn Property="p => p.Stock" Title="Stock" Sortable="true" />
+                    </QuickGrid>
+                </div>
+
+            </div>
+        </div>
+
+        @* Footer *@
+        <div class="card-footer d-flex justify-content-between align-items-center">
+            <label><strong>Cantidad: </strong> @ListaProductos.Count()</label>
+        </div>
+
+    </div>
+</div>
+
+
+@code {
+    public string Filtro { get; set; } = string.Empty;
+    public string ValorFiltro { get; set; } = string.Empty;
+
+    public List<Productos> ListaProductos { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var resultado = await productosService.GetList(p => p.ProductoId > 0);
+        ListaProductos = resultado.Value;
+    }
+
+    private async Task Buscar()
+    {
+        if (Filtro == "ProductoId")
+        {
+            var valor = ValorFiltro.Trim();
+            var resultado = await productosService.GetList(p => p.ProductoId.ToString() == valor);
+
+            ListaProductos = resultado.Value;
+        }
+
+        else if (Filtro == "Nombre")
+        {
+            var valor = ValorFiltro.Trim().ToLower();
+            var resultado = await productosService.GetList(p => p.Nombre.ToLower().Contains(valor));
+
+            ListaProductos = resultado.Value;
+        }
+
+        else
+        {
+            toastService.ShowError("Seleccione un filtro");
+        }
+    }
+
+    private async Task Reestablecer()
+    {
+        var resultado = await productosService.GetList(p => p.ProductoId > 0);
+        ListaProductos = resultado.Value;
+
+        Filtro = string.Empty;
+        ValorFiltro = string.Empty;
+    }
+}
